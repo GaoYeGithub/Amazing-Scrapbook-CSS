@@ -1,0 +1,218 @@
+:root {
+  --fonts-body: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+  --colors-background: #1e1b2e;
+  --colors-text: #d4d4f7;
+  --colors-elevated: #4c3f91;
+  --colors-muted: #7a5caa;
+  --anthonian-primary-color: rgb(98, 49, 211);
+  --anthonian-anchor-active: rgb(0, 174, 255);
+  --anthonian-anchor: rgb(116, 165, 255);
+  --anthonian-anchor-hover: rgb(255, 255, 255);
+  --anthonian-vibrate-animation-duration: 0.5s;
+  --anthonian-vibrate-animation-iteration-count: infinite;
+}
+
+@keyframes anthonian-vibrate-animation {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+body {
+  background-color: var(--anthonian-body-background);
+}
+a {
+  color: var(--anthonian-anchor) !important;
+  transition: all 0.3s;
+}
+a:hover {
+  color: var(--anthonian-anchor-hover) !important;
+  animation: anthonian-vibrate-animation;
+  animation-duration: var(--anthonian-vibrate-animation-duration);
+  animation-iteration-count: var(--anthonian-vibrate-animation-iteration-count);
+}
+.header-title-name::after {
+  content: " 'I can't code' ";
+  background-image: url(https://img.freepik.com/free-photo/portrait-cute-dog-anime-style_23-2151382146.jpg?t=st=1723163985~exp=1723167585~hmac=50a23402a7673807d5d05ceea1869b6bc306f548e81a7a76d250ccd4b89aa8f1&w=740);
+  padding-right: 100px;
+  background-position: 86% center, 93% center;
+  background-repeat: no-repeat;
+  background-size: 35px, 57px;
+}
+
+.post-header-date, .post-text {
+  color: white !important; 
+}
+
+.nav * {
+  color: white !important; 
+}
+
+.header-title-avatar {
+  box-shadow: 0px 0px 20px #00000055;
+  border-radius: 10px; 
+}
+
+.nav-link-home::before {
+  content: "Neat ";
+}
+
+.header-link {
+  color: white;
+}
+
+.react-calendar-heatmap text {
+  fill: white;
+  font-weight: bold;
+}
+
+.header-streak::after {
+  content: "!";
+}
+.header-streak {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white; 
+}
+.header {
+  margin-bottom: 30px; 
+}
+.react-calendar-heatmap {
+  height: 0; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+
+.header-title-name {
+  animation: twinkle 3s infinite;
+}
+
+
+.header-title-name {
+  animation: rainbow 5s infinite;
+}
+
+.header-chart::before {
+  content: "\"We always look back upon the good old days, back when things hadn't morphed.\"";
+  color: white;
+  font-size: 30px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  text-shadow: 0px 0px 20px #00000055;
+}
+
+.header-chart::after {
+  content: " - Realized I completed 1/6 of life😭";
+  font-size: 30px;
+  font-family: Fira Sans;
+  font-weight: bold;
+  color: white;
+  opacity: 0.66;
+  transition: opacity 300ms;
+}
+
+.posts::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  background-image: url(https://doggo.ninja/JMhgtp.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 300px;
+
+  animation: scuttle 8s infinite alternate ease-in-out;
+}
+
+.nav-link-about::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  position: absolute;
+
+  border-radius: 50%;
+  z-index: 3;
+  background-image: url('your-moon-image-url'), linear-gradient(to bottom right, #a6a6a6, #8d8d8d);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 0px 20px #d9d9d9;
+  animation: circle 10s infinite linear;
+}
+
+.header-title-avatar {
+  animation: rotate 5s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { color: #d4d4f7; }
+  50% { color: #7a5caa; }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translate(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(150px) rotate(-360deg);
+  }
+}
+
+@keyframes scuttle {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(80px) scale(1.1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+  background: url(https://img.freepik.com/free-photo/anime-style-character-space_23-2151133896.jpg?t=st=1723162856~exp=1723166456~hmac=b75d76036a693b65d803b1725135ef46d699204ed874ad57fed39feefa71b653&w=1380)
+}
